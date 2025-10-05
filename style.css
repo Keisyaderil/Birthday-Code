@@ -1,0 +1,86 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+/* Pengaturan Latar Belakang dan Layout Halaman */
+body {
+    margin: 0;
+    height: 100vh;
+    /* Ubah gradasi menjadi biru gelap ke kuning terang */
+    background: linear-gradient(135deg, #000033 0%, #ffcc00 100%); /* Biru gelap ke Kuning terang */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    text-align: center; 
+    font-family: sans-serif; /* Pilih font yang mudah dibaca */
+    color: #ffffff; /* Warna teks putih untuk kontras dengan latar biru gelap */
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3); /* Sedikit transparansi pada kontainer */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+  
+/* Style Judul */
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Kuning terang untuk judul */
+    text-shadow: 2px 2px 4px #000000;
+}
+  
+/* Style Paragraf Ucapan dan Doa */
+.ucapan-utama {
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+  
+/* Container untuk Gambar Kue */
+.cake-container {
+    margin: 20px 0;
+    /* Anda bisa menambahkan animasi di sini jika diinginkan, tapi saya menghilangkannya untuk fokus pada kue */
+}
+
+/* Style Gambar Kue Ulang Tahun */
+.birthday-cake {
+    width: 200px; /* Ukuran gambar kue */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border: 5px solid #ffcc00; /* Border kuning terang */
+    box-shadow: 0 0 25px #ffcc00; /* Efek cahaya kuning */
+    /* Tambahkan animasi sederhana jika diinginkan, misalnya 'pulse' */
+    animation: pulse 2s infinite alternate; 
+}
+
+/* Animasi Pulse untuk Gambar Kue */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+  
+/* Style Paragraf Penutup */
+.penutup {
+    margin-top: 20px; 
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Menghilangkan semua kode CSS yang berkaitan dengan ".flower", ".petal", ".center", dan "@keyframes rotateFlower" */
+/* Kode yang lama telah dihapus sepenuhnya di sini */
