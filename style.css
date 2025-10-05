@@ -9,15 +9,15 @@
 body {
     margin: 0;
     height: 100vh;
-    /* Ubah gradasi menjadi biru gelap ke kuning terang */
-    background: linear-gradient(135deg, #000033 0%, #ffcc00 100%); /* Biru gelap ke Kuning terang */
+    /* Gradasi Biru Pastel ke Hijau Pastel */
+    background: linear-gradient(135deg, #a8dadc 0%, #b8e994 100%); /* Biru Pastel ke Hijau Pastel */
     display: flex;
     justify-content: center;
     align-items: center; 
     flex-direction: column; 
     text-align: center; 
-    font-family: sans-serif; /* Pilih font yang mudah dibaca */
-    color: #ffffff; /* Warna teks putih untuk kontras dengan latar biru gelap */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: #333333; /* Warna teks gelap untuk kontras dengan latar pastel */
 }
   
 .container {
@@ -26,61 +26,72 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.3); /* Sedikit transparansi pada kontainer */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.7); /* Background semi-transparan putih */
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Bayangan lebih ringan */
+    max-width: 90%;
 }
   
 /* Style Judul */
 h1 {
     font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #ffcc00; /* Kuning terang untuk judul */
-    text-shadow: 2px 2px 4px #000000;
+    font-weight: 900;
+    margin-bottom: 25px;
+    color: #457b9d; /* Warna biru sedang/cerah untuk judul */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
   
 /* Style Paragraf Ucapan dan Doa */
 .ucapan-utama {
     font-size: 20px;
     margin-bottom: 30px;
-    padding: 0 20px;
-    line-height: 1.6;
-    max-width: 600px;
-}
-  
-/* Container untuk Gambar Kue */
-.cake-container {
-    margin: 20px 0;
-    /* Anda bisa menambahkan animasi di sini jika diinginkan, tapi saya menghilangkannya untuk fokus pada kue */
+    padding: 0 15px;
+    line-height: 1.7;
+    max-width: 650px;
 }
 
+/* --- BAGIAN TAMBAHAN UNTUK GALERI FOTO --- */
+
+.photo-gallery {
+    display: flex; /* Membuat foto sejajar (horizontal) */
+    gap: 15px; /* Jarak antara dua foto */
+    margin: 20px 0; /* Jarak atas dan bawah */
+    align-items: center;
+    justify-content: center;
+}
+  
 /* Style Gambar Kue Ulang Tahun */
 .birthday-cake {
-    width: 200px; /* Ukuran gambar kue */
-    height: 200px;
+    /* UKURAN FOTO KUE DIKECILKAN */
+    width: 120px; 
+    height: 120px;
     object-fit: cover;
     border-radius: 50%; /* Membuat gambar menjadi bulat */
-    border: 5px solid #ffcc00; /* Border kuning terang */
-    box-shadow: 0 0 25px #ffcc00; /* Efek cahaya kuning */
-    /* Tambahkan animasi sederhana jika diinginkan, misalnya 'pulse' */
-    animation: pulse 2s infinite alternate; 
+    border: 5px solid #2a9d8f; /* Border hijau turquoise */
+    box-shadow: 0 0 20px #2a9d8f; /* Efek cahaya hijau */
+    /* Animasi pergerakan/kedipan ringan */
+    animation: bounce 2s infinite alternate; 
 }
 
-/* Animasi Pulse untuk Gambar Kue */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.05); }
+/* --- BARU: STYLE UNTUK FOTO ERDI (tambahan-foto) --- */
+.tambahan-foto {
+    /* UKURAN FOTO ERDI DIATUR SAMA KECIL */
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px; /* Bentuk persegi dengan sudut melengkung */
+    border: 5px solid #457b9d; /* Border biru pastel */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Animasi pergerakan ringan (bisa diubah sesuai selera) */
+    animation: bounce 2.2s infinite alternate-reverse; 
+}
+
+
+/* Animasi Bounce Sederhana untuk Kue dan Foto */
+@keyframes bounce {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-7px) scale(1.03); } /* Sedikit diperkecil pergerakannya */
 }
   
-/* Style Paragraf Penutup */
-.penutup {
-    margin-top: 20px; 
-    font-size: 16px;
-    font-style: italic;
-    opacity: 0.8;
-}
-
-/* Menghilangkan semua kode CSS yang berkaitan dengan ".flower", ".petal", ".center", dan "@keyframes rotateFlower" */
-/* Kode yang lama telah dihapus sepenuhnya di sini */
+/* Style Paragraf Pen
